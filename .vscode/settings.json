@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "klee_kernel_stubs.h": "c",
+        "klee.h": "c"
+    }
+}

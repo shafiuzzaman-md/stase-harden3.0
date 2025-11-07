@@ -1,0 +1,17 @@
+{
+  "type": "DANGLING_PTR",
+  "file": "../inputs/../stase_generated_last/instrumented_source/drivers/usb_event_logger/usb_event_logger.c",
+  "line": 103,
+  "target": "usb_register_notify(&usb_nb);",
+  "variables": [
+    { "name": "do_unregister",        "type": "_Bool" },
+    { "name": "module_alive",         "type": "_Bool" },
+    { "name": "notifier_registered",  "type": "_Bool" }
+  ],
+  "assumptions": [
+    "module_alive == 0",
+    "notifier_registered == 0"
+  ],
+  "assertion": "!( !module_alive && notifier_registered )",
+  "precondition": "(query [(Eq false (Extract 0 (Read w8 0 module_alive))) (Eq false (Extract 0 (Read w8 0 notifier_registered))) (Eq false (Extract 0 (Read w8 0 do_unregister)))] false)"
+}

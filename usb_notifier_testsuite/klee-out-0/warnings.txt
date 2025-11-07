@@ -1,0 +1,11 @@
+KLEE: ERROR: EXITING ON ERROR:
+Error: ASSERTION FAIL: !( !module_alive && notifier_registered )
+File: src/usb_event_logger.c
+Line: 30
+assembly.ll line: 63
+State: 2
+Stack: 
+	#000000063 in usb_logger_init() at src/usb_event_logger.c:30
+	#100000244 in main() at driver/klee_driver_dangling_notify.c:59
+
+
